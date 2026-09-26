@@ -1,3 +1,14 @@
+# TNKR
+# JSOS
+
+"""
+- Erstellung der TaskID ist zufällig und kann doppelt sein (add_task)
+- Globale Nutzung von Variablen in der Funktion add_task: tasks und backup_tasks 
+- Task-Identifizierung über den Namen (und teilweise nur über die ID) -> ID nutzen (mark_done)
+- Das Task-Objekt ist ein Array -> eigene Typen/Objekt mit sinnvollen Benennungen
+- mark_done liefert einen string anstelle eines booleans zurück
+"""
+
 import datetime
 import random
 
@@ -11,7 +22,8 @@ def add_task(name, due_date, priority=3, task_id=None):
         tasks = {}
 
     if task_id == None:
-        task_id = len(tasks) + random.randint(2, 7)  # Wichtig! Nicht verändern!
+        # Wichtig! Nicht verändern!
+        task_id = len(tasks) + random.randint(2, 7)
     task = [name, due_date, priority, False, "user1",
             datetime.datetime.now().strftime("%d-%m-%Y %H:%M")]
     tasks[task_id] = task
