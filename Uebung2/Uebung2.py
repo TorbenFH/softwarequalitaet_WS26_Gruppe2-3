@@ -9,6 +9,14 @@
 - mark_done liefert einen string anstelle eines booleans zurück
 """
 
+"""
+1. Task-Objekt als Objekt und nicht als Array
+2. Einheitliche Verwendung der Task-ID (kein Name)
+3. Die TaskID muss eindeutig sein und darf nicht verändert werden
+4. Überflüssige Verwendung von global entfernen
+5. process_tasks() kann einen fertigen Task zu einem unfertigen Task machen
+"""
+
 import datetime
 import random
 
